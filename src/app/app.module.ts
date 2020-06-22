@@ -18,7 +18,7 @@ import { ReportsComponent } from './trasnaction/reports.component';
 
 
 const routes: Routes = [
-
+ 	{ path: '', redirectTo: '/transactions', pathMatch: 'full' },
 	{path:'transactions',component:TrasnactionComponent},
 	{path:'transactions/form',component:FormComponent},
 	{path:'transactions/user/:id',component:UserComponent},
