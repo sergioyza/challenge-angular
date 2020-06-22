@@ -1,0 +1,15 @@
+<main role="main" class="container">
+
+		 <div class="starter-template">
+			 <h1>Wellcome to Challenge</h1>
+			 <p class="lead">Este proyecto consulta al servicio elaborado en spring boot<br></p>
+			 <p class="lead">Sergio Daniel Pucheta Yza</p>
+		 </div>
+			<div class="container">
+				<form class="form-inline my-2 my-lg-0" (ngSubmit) = "findUserList()">
+		      <input [(ngModel)]="idUser" name="idUser" class="form-control mr-sm-2" type="search" placeholder="user id" aria-label="idUser" required="true">
+		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i> search</button>
+		    </form>
+			</div>
+
+	 </main><!-- /.container -->

@@ -1,0 +1,38 @@
+<div class="container">
+
+	<div class="container">
+		<h5>Id user: <span class="badge badge-secondary"> {{idUser}}</span></h5>
+		<button class="btn btn-outline-success mb-4" type="button" [routerLink]="['/transactions','user',idUser,'sum']">SUM TRANSACTION</button>
+		<button class="btn btn-outline-success mb-4" type="button" [routerLink]="['/transactions','user',idUser,'report']">TRANSACTION REPORT SERVICE</button>
+
+	</div>
+	<div class="card">
+		<div class="card-header">
+			<h3>LIST TRANSACTION</h3>
+		</div>
+		<div class="card-body">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>transaction_id</th>
+						<th>amount</th>
+						<th>description</th>
+						<th>date</th>
+						<th>user_id</th>
+						<th>show</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let transaction of transactions" class="text-center">
+						<td>{{transaction.transaction_id}}</td>
+						<td>{{transaction.amount}}</td>
+						<td>{{transaction.description}}</td>
+						<td>{{transaction.date}}</td>
+            <td>{{transaction.user_id}}</td>
+						<td><button class="btn btn-info" type="button" name="button" [routerLink]="['/transactions',transaction.transaction_id,'user',transaction.user_id]">show</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
